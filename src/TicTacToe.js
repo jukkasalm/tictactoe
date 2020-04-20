@@ -1,11 +1,12 @@
 import React from 'react';
+import Square from './components/Square';
 
 import gameStyles from './TicTacToe.module.scss';
 
-function TicTacToe() {
+const TicTacToe = () => {
 	return (
 		<div className={ gameStyles.base }>
-			TicTacToe
+			<Square />
 		</div>
 	)
 };
@@ -25,10 +26,6 @@ Requirements:
 		- calculates what the next turn is
 		- sets the state of the board and turn
 	- a function that calculates the winner
-	
-* A square component
-	- has a value inside the square that takes in props
-	- has an onClick function that takes in props
 
 */
 
