@@ -80,22 +80,14 @@ const Board = () => {
 		return null;
 	};
 
-
-	// Show next player
-	let nextPlayer;
-	nextPlayer = `Next player: ${xIsNext ? 'X' : 'O'}`;
-
 	// Find out if game is over, returns boolean
-	const gameWinnerName = isWinner(squares);
+	const gameWinner = isWinner(squares);
 
-	let gameStatus;
-	gameStatus = gameWinnerName ? `${gameWinnerName} wins!` : '';
+	// Show next player if game not over, otherwise show winner
+	let gameStatus = gameWinner ? `${gameWinner} wins!` : `Next player: ${xIsNext ? 'X' : 'O'}`;
 
 	return (
 		<div className={boardStyles.root}>
-			<div className={boardStyles.nextPlayer}>
-				{nextPlayer}
-			</div>
 			<div className={boardStyles.grid}>
 				{renderSquare(0)}
 				{renderSquare(1)}
