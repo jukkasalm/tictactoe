@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import gameStyles from './TicTacToe.module.scss';
 
 function TicTacToe() {
 	return (
-		<div>
+		<div className={ gameStyles.base }>
 			TicTacToe
 		</div>
 	)
