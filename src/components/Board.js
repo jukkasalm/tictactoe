@@ -13,7 +13,7 @@ const Board = () => {
 
 	// a board state
 	// (creates an array of nine squares, filled with null values)
-	const [squares, setSquares] = useState([Array(9).fill(null)]);
+	const [squares, setSquares] = useState(Array(9).fill(null));
 
 	// a turn state
 	// (a simple boolean to see whose turn it is next)
@@ -110,7 +110,7 @@ const Board = () => {
 			<div className={boardStyles.gameStatus} data-status={gameStatus}>
 				{gameStatus}
 			</div>
-			<button className={boardStyles.restart} onClick={() => setSquares([Array(9).fill(null)])} >
+			<button className={boardStyles.restart} onClick={() => setSquares(Array(9).fill(null))} >
 				Restart game
 			</button>
 
