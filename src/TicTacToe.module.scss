@@ -1,3 +1,14 @@
-.base {
-	background: white;
+.root {
+	position: absolute;
+	
+	background-color: #f3c076ff;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	display: grid;
+	align-items: center;
+	justify-items: center;
 }

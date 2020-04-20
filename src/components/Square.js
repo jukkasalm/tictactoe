@@ -11,9 +11,7 @@ import squareStyles from './Square.module.scss';
 */
 
 const Square = ({ value, onClick }) => (
-	<button className={squareStyles.button} onClick={onClick} data-value={value}>
-		{value}
-	</button>
+	<button className={squareStyles.button} onClick={onClick} data-value={value}></button>
 );
 
 

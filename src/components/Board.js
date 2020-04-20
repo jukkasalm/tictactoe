@@ -87,8 +87,8 @@ const Board = () => {
 	let gameStatus = gameWinner ? `${gameWinner} wins!` : `Next player: ${xIsNext ? 'X' : 'O'}`;
 
 	return (
-		<div className={boardStyles.root}>
-			<div className={boardStyles.grid}>
+		<div className={boardStyles.base}>
+			<div className={boardStyles.board}>
 				{renderSquare(0)}
 				{renderSquare(1)}
 				{renderSquare(2)}
@@ -105,11 +105,8 @@ const Board = () => {
 			<button className={boardStyles.restart} onClick={() => setSquares(Array(9).fill(null))} >
 				Restart game
 			</button>
-
 		</div>
 	)
 };
-
-// - a function that calculates the winner
 
 export default Board;

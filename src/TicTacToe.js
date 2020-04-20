@@ -5,7 +5,7 @@ import gameStyles from './TicTacToe.module.scss';
 
 const TicTacToe = () => {
 	return (
-		<div className={ gameStyles.base }>
+		<div className={ gameStyles.root }>
 			<Board />
 		</div>
 	)
