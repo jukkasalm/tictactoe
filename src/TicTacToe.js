@@ -1,12 +1,12 @@
 import React from 'react';
-import Square from './components/Square';
+import Board from './components/Board';
 
 import gameStyles from './TicTacToe.module.scss';
 
 const TicTacToe = () => {
 	return (
 		<div className={ gameStyles.base }>
-			<Square />
+			<Board />
 		</div>
 	)
 };

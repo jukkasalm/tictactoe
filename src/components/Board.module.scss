@@ -1,0 +1,26 @@
+.grid {
+	display: grid;
+	grid: repeat(3, 1fr) / repeat(3, 1fr);
+	width: 100%;
+	max-width: 200px;
+}
+
+.nextPlayer {
+	font-size: 18px;
+	margin-bottom: 1rem;
+}
+
+.restart {
+
+}
+
+.gameStatus {
+	font-size: 15px;
+	
+	&[data-status^="X"] {
+		color: red; 
+	}
+	&[data-status^="O"] {
+		color: blue; 
+	}
+}
