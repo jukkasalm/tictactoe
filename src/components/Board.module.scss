@@ -1,15 +1,16 @@
 .base {
-	display: grid;
-	grid: 1fr / 1fr;
-	background: #f3c076ff;
-	padding: 4rem;
 	position: relative;
+	display: grid;
+	grid: 225px / 225px;
+	justify-items: center;
+	background: #fff;
+	border-radius: 38px;
+	padding: 4rem;
 
 	animation: fadein .8s;
 
-
 	&:after {
-		border-radius: 2rem 0;
+		border-radius: 38px;
 		content: '';
 		position: absolute;
 		left: 0;
@@ -17,11 +18,11 @@
 		top: 0;
 		bottom: 0;
 		opacity: 1;
-		box-shadow:  36px 36px 71px #cfa364, 
-		             -36px -36px 71px #ffdd88;	
+		border-radius: 36px;
+		box-shadow:  43px 43px 92px #d9d9d9, 
+		-43px -43px 92px #ffffff;
 
-		animation: fadein 1s, scale 1.2s;
-
+		animation: fadein 1s;
 		pointer-events: none;
 	}
 }
@@ -36,7 +37,27 @@
 	background-color: #b6a999;
 }
 
+.gameStatus {
+	font-family: 'Nunito', serif;
+	color: #00000090;
+	font-weight: 600;
+	font-size: 1.2rem;
+	margin: 1rem 0 2rem;
+	
+	&[data-status^="X"] {
+		color: #72d9b7; 
+	}
+	&[data-status^="O"] {
+		color: #c18500; 
+		font-weight: 600;
+	}
+}
+
 .restart {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	color: #00000090;
 	position: relative;
 	border: none;
 	outline: none;
@@ -44,9 +65,12 @@
 	padding: 1rem;
 	cursor: pointer;
 	border-radius: .5rem;
-	background-color: #fbe2bd;
+	background-color: #fff;
 
-	transition: .1s background-color;
+	border-radius: 8px;
+	background: linear-gradient(145deg, #e6e6e64f, #fff);
+
+	transition: .07s background-color;
 
 	&:after {
 		content: '';
@@ -56,31 +80,21 @@
 		right: 0;
 		bottom: 0;
 		border-radius: .5rem;
-		box-shadow: 1px 1px 6px -1px rgba(0,0,0,.2);
+		box-shadow:  7px 7px 14px #d9d9d9, 
+		-7px -7px 14px #ffffff;
 
 		transition: .1s box-shadow, .05s background-color;
 
 	}
 	&:active {
-		background-color: desaturate(darken(#fbe2bd, 10), 10);
+		background-color: darken(#fff, 5);
 	}
 	&:hover:after {
-		box-shadow: 1px 4px 6px -1px rgba(0,0,0,.2);
+		box-shadow: 1px 3px 6px -1px rgba(0,0,0,.2);
+
 	}
 	&:active:after {
-		box-shadow: 1px 2px 6px -1px rgba(0,0,0,.2);
-	}
-}
-
-.gameStatus {
-	font-size: 1.2rem;
-	margin-bottom: 16px;
-	
-	&[data-status^="X"] {
-		color: red; 
-	}
-	&[data-status^="O"] {
-		color: blue; 
+		box-shadow: 1px 3px 6px -1px rgba(0,0,0,.2);
 	}
 }
 
