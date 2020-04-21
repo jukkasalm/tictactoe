@@ -84,7 +84,13 @@ const Board = () => {
 	const gameWinner = isWinner(squares);
 
 	// Show next player if game not over, otherwise show winner
-	let gameStatus = gameWinner ? `${gameWinner} wins!` : `Next player: ${xIsNext ? 'X' : 'O'}`;
+	let gameStatus; 
+
+	if (!squares.includes(null)) {
+		gameStatus = 'Stalemate!';
+	} else {
+	 	gameStatus = gameWinner ? `${gameWinner} wins!` : `Next player: ${xIsNext ? 'X' : 'O'}`
+	};
 
 	return (
 		<div className={boardStyles.base}>

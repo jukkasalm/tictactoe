@@ -18,3 +18,17 @@
 	margin-bottom: 3rem;
 	z-index: 1;
 }
+
+.link {
+	color: #00000050;
+	font-family: Nunito, sans-serif;
+	text-decoration: none;
+	margin-top: 2rem;
+	z-index: 1;
+
+	transition: color .1s;
+
+	&:hover, &:active, &:focus {
+		color: #00000090;
+	}
+}
