@@ -83,10 +83,10 @@ const Board = () => {
 	// Find out if game is over, returns boolean
 	const gameWinner = isWinner(squares);
 
-	// Show next player if game not over, otherwise show winner
-	let gameStatus; 
 
-	if (!squares.includes(null)) {
+	// show stalemate result if there are no empty squares and no game winner, otherwise show game status
+	let gameStatus; 
+	if (!squares.includes(null) && !gameWinner) {
 		gameStatus = 'Stalemate!';
 	} else {
 	 	gameStatus = gameWinner ? `${gameWinner} wins!` : `Next player: ${xIsNext ? 'X' : 'O'}`
@@ -94,7 +94,7 @@ const Board = () => {
 
 	return (
 		<div className={boardStyles.base}>
-			<div className={boardStyles.board}>
+			<div className={boardStyles.board} data-status={gameStatus}>
 				{renderSquare(0)}
 				{renderSquare(1)}
 				{renderSquare(2)}
@@ -105,7 +105,7 @@ const Board = () => {
 				{renderSquare(7)}
 				{renderSquare(8)}
 			</div>
-			<div className={boardStyles.gameStatus} data-status={gameStatus}>
+			<div className={boardStyles.gameStatus}>
 				{gameStatus}
 			</div>
 			<button className={boardStyles.restart} onClick={() => setSquares(Array(9).fill(null))} >

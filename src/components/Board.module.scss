@@ -35,6 +35,19 @@
 	max-width: 200px;
 	margin-bottom: 1rem;
 	background-color: #b6a999;
+
+	transition: opacity .1s;
+
+	&[data-status^="Stalemate"] {
+		opacity: .5;
+	}
+	&[data-status^="X"] + .gameStatus {
+		color: #72d9b7; 
+	}
+	&[data-status^="O"] + .gameStatus {
+		color: #c18500; 
+		font-weight: 600;
+	}
 }
 
 .gameStatus {
@@ -44,13 +57,6 @@
 	font-size: 1.2rem;
 	margin: 1rem 0 2rem;
 	
-	&[data-status^="X"] {
-		color: #72d9b7; 
-	}
-	&[data-status^="O"] {
-		color: #c18500; 
-		font-weight: 600;
-	}
 }
 
 .restart {
