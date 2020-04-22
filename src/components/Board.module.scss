@@ -43,6 +43,7 @@
 	}
 	&[data-status^="X"] + .gameStatus {
 		color: #72d9b7; 
+		font-weight: 600;
 	}
 	&[data-status^="O"] + .gameStatus {
 		color: #c18500; 
