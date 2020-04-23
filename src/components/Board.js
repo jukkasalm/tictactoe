@@ -48,6 +48,13 @@ const Board = () => {
 		)
 	};
 
+	// Reset game and make X go first
+	const resetGame = () => {
+		setSquares(Array(9).fill(null));
+		setXIsNext(true);
+		return;
+	};
+
 	// Check if a winner exists
 	const isWinner = (squares) => {
 		const lines = [
@@ -108,7 +115,7 @@ const Board = () => {
 			<div className={boardStyles.gameStatus}>
 				{gameStatus}
 			</div>
-			<button className={boardStyles.restart} onClick={() => setSquares(Array(9).fill(null))} >
+			<button className={boardStyles.restart} onClick={() => resetGame()} >
 				Restart game
 			</button>
 		</div>
