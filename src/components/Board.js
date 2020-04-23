@@ -41,13 +41,6 @@ const Board = () => {
 		setXIsNext(!xIsNext);
 	};
 
-	// Render single square
-	const renderSquare = index => {
-		return (
-			<Square value={squares[index]} onClick={() => handleClick(index)} />
-		)
-	};
-
 	// Reset game and make X go first
 	const resetGame = () => {
 		setSquares(Array(9).fill(null));
@@ -102,15 +95,9 @@ const Board = () => {
 	return (
 		<div className={boardStyles.base}>
 			<div className={boardStyles.board} data-status={gameStatus}>
-				{renderSquare(0)}
-				{renderSquare(1)}
-				{renderSquare(2)}
-				{renderSquare(3)}
-				{renderSquare(4)}
-				{renderSquare(5)}
-				{renderSquare(6)}
-				{renderSquare(7)}
-				{renderSquare(8)}
+				{squares.map((square, index) => (
+					<Square value={squares[index]} onClick={() => handleClick(index)} key={index} />
+				))}
 			</div>
 			<div className={boardStyles.gameStatus}>
 				{gameStatus}
