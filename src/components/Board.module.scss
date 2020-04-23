@@ -9,15 +9,14 @@
 
 	animation: fadein .8s;
 
-	@media screen and (max-width: 450px) {
-		padding: 4rem 0;
-		width: 100%;
-		border-radius:0;
+	@media (max-width: 450px) {
 		justify-content: center;
+		width: 100%;
+		padding: 4rem 0;
+		border-radius:0;
 	}
 
 	&:after {
-		border-radius: 38px;
 		content: '';
 		position: absolute;
 		left: 0;
@@ -25,7 +24,7 @@
 		top: 0;
 		bottom: 0;
 		opacity: 1;
-		border-radius: 36px;
+		border-radius: 38px;
 		box-shadow:  43px 43px 92px #d9d9d9, 
 		-43px -43px 92px #ffffff;
 
@@ -63,8 +62,8 @@
 }
 
 .gameStatus {
-	font-family: 'Nunito', serif;
 	color: #00000090;
+	font-family: 'Nunito', serif;
 	font-weight: 600;
 	font-size: 1.2rem;
 	margin: 1rem 0 2rem;
@@ -72,20 +71,18 @@
 }
 
 .restart {
+	color: #00000090;
 	font-family: 'Nunito', sans-serif;
 	font-weight: 600;
 	font-size: 16px;
-	color: #00000090;
-	position: relative;
 	border: none;
 	outline: none;
-	display: block;
 	padding: 1rem;
+	position: relative;
 	cursor: pointer;
-	border-radius: .5rem;
 	background-color: #fff;
 
-	border-radius: 8px;
+	border-radius: .5rem;
 	background: linear-gradient(145deg, #e6e6e64f, #fff);
 
 	transition: .07s background-color;
