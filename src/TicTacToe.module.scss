@@ -10,6 +10,8 @@
 	display: grid;
 	align-content: center;
 	justify-items: center;
+
+	min-height: 750px;
 }
 
 .heading {
@@ -17,6 +19,9 @@
 	font-size: 2rem;
 	margin-bottom: 3rem;
 	z-index: 1;
+	text-align: center;
+	padding-left: .5rem;
+	padding-right: .5rem;
 }
 
 .link {

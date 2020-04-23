@@ -9,6 +9,13 @@
 
 	animation: fadein .8s;
 
+	@media screen and (max-width: 450px) {
+		padding: 4rem 0;
+		width: 100%;
+		border-radius:0;
+		justify-content: center;
+	}
+
 	&:after {
 		border-radius: 38px;
 		content: '';
@@ -24,6 +31,10 @@
 
 		animation: fadein 1s;
 		pointer-events: none;
+
+		@media screen and (max-width: 450px) {
+			border-radius: 0;
+		}
 	}
 }
 
